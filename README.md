@@ -4,9 +4,9 @@ This is the first assignment in BAN400. As you know -- given that you have come 
 
 **Date:**
 
-**Name:**
+**Name:** Fabian Oschwald
 
-**Student number:**
+**Student number:** s231504
 
 ## :information_source: Problem 1
 Update the personal information above.
