@@ -19,7 +19,7 @@ file <- file("output.txt")
 writeLines(galaxy_data, file)
 close(file)
 
-# read in new file using column names overwriting initial data
+# read in new file overwriting initial data
 galaxy_data <- read_delim("output.txt", delim = "|", trim_ws = TRUE)
 
 
