@@ -23,5 +23,26 @@ close(file)
 galaxy_data <- read_delim("output.txt", delim = "|", trim_ws = TRUE)
 
 
+# plot sample distribution of linear diameter (a_26)
+galaxy_data %>% 
+  ggplot(aes(x = a_26)) +
+  geom_histogram()
+
+# This distribution is clearly skewed to the right.
+# If we think that size is symmetrically distributed,
+# then this could be an indication for a selection bias.
+
+# calculate empirical skewness (> 0)
+moments::skewness(galaxy_data$a_26, na.rm = TRUE)
+
+# Theoretical argument: Size and brightness should be correlated. The fact that
+# brighter galaxies might be easier to detect, could be a reason for this bias.
+
+# bigger galaxies are brighter (the smaller m_b, the brighter)
+galaxy_data %>% 
+  ggplot(aes(x = a_26, y = m_b)) +
+  geom_point() +
+  geom_smooth()
+
 
 
