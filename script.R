@@ -28,7 +28,7 @@ galaxy_data <- read_delim("output.txt", delim = "|", trim_ws = TRUE)
 # Idea: Brighter galaxies are more likely to be detected which are bigger
 # --> Bias towards smaller galaxies
 
-# plot sample distribution of linear diameter (a_26) with opposite sign for
+# plot sample distribution of absolute magnitude (m_b) with opposite sign for
 # interpretation. In the plot higher -m_b means higher brightness.
 galaxy_data %>% 
   ggplot(aes(x = -m_b)) +
